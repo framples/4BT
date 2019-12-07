@@ -56,9 +56,32 @@ h1 {
     width: 48%;
     margin-right: 4%;
 }
+
+.w32 {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    padding-top: 130px;
+}
+
 .agile {
     float: right;
     width: 48%;
+}
+
+.agile2 {
+    float: right;
+    width: 40%;
+    background-color: lightblue;
+    margin-top: 60px;
+    padding: 15px;
+}
+
+.agile3 {
+    float: right;
+    width: 40%;
+    margin-top: 60px;
+    font-size: 15px;
 }
 
 .signin-form {
