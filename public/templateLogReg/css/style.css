@@ -28,15 +28,17 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*--end reset--*/
 body {
-    font-family: 'Jura', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background:#0a4981;
+    background-image: url("people.jpg");
 }
 h1 {
     color: #fff;
+    background: black;
     text-align: center;
-    padding: 1em 0 0 0;
-    font-size: 3em;
-    font-weight: 700;
+    padding: 40px 0;
+    font-size: 70px;
+    font-weight: 900;
 }
 /*-- main --*/
 .main {
@@ -58,8 +60,11 @@ h1 {
     float: right;
     width: 48%;
 }
+
 .signin-form {
-    background: url(../images/banner1.jpg)no-repeat 0px 0px;
+    background: teal;
+   
+    border-radius: 10px;
     background-size: cover;
     padding: 2em 2em;
 	text-align: center;
