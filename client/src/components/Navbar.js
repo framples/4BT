@@ -8,6 +8,10 @@ class Navbar extends Component {
         this.props.history.push('/')
     }
 
+    componentDidUpdate() {
+        console.log("Actual navbar this time", localStorage.usertoken);
+    }
+
     render() {
         const userLink = (
             <ul className="navbar-nav">
@@ -59,7 +63,7 @@ class Navbar extends Component {
                             </Link>
                         </li>
                     </ul>
-                    {localStorage.usertoken ? loginRegLink : userLink}
+                    {localStorage.usertoken ? userLink : loginRegLink}
                 </div>
             </nav>
 
