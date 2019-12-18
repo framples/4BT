@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "./register.css"; 
 
 import { register } from './UserFunctions'
 
@@ -40,10 +41,10 @@ class Register extends Component {
     render() {
         return (
             <div className="container">
-                <div className="row">
+                <div className="row2">
                     <div className="col-md-6 mt-5 mx-auto">
                         <form onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Register here.</h1>
+                            <h1 id="submit2" className="h3 mb-3 font-weight-normal">Register here.</h1>
                             <div className="form-group">
                                 <label htmlFor="first_name">First Name</label>
                                 <input type="text" className="form-control"
