@@ -12,11 +12,18 @@ code {
     monospace;
 }
 
-.row  {
+.row1  {
   background-color: teal;
   padding: 30px;
   margin: 30px;
   border-radius: 10%;
+  width: 600px;
+  margin-left: 250px;
+
+}
+
+.row1:hover  {
+  background-color: rgb(8, 169, 169);
 }
 
 #submit-title {
@@ -24,8 +31,19 @@ code {
   margin-top: -30px;
   margin-bottom: 30px;
   padding-bottom: 30px;
+  color: white;
+  font-size: 35px;
+
 }
 
 #submit {
   margin-bottom: 30px;
+}
+
+.form-group-1 {
+  font-size: 25px;
+}
+
+#submit1  {
+  margin-top: 15px;
 }
