@@ -41,6 +41,7 @@ class Login extends Component {
 
     render() {
         return (
+       
             <div className="container">
                 <div className="row1 magictime spaceInLeft">
                     <div className="col-md-6 mt-5 mx-auto">
@@ -69,6 +70,7 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
+       
         )
     }
 

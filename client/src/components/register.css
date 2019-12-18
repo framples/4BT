@@ -22,16 +22,20 @@ code {
 
 }
 
-.row2:hover{
-  opacity: .8;
+#submit1  {
+  margin-top: 15px;
 }
 
-#submit-2 {
+#submit-title {
   padding: 0px;
-  margin-top: -50px;
+  margin-top: -30px;
   margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   color: white;
   font-size: 35px;
 
+}
+
+.form-group-1 {
+  font-size: 25px;
 }
