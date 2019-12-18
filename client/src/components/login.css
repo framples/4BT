@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.row  {
+  background-color: teal;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 10%;
+}
+
+#submit-title {
+  padding: 0px;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+#submit {
+  margin-bottom: 30px;
+}
