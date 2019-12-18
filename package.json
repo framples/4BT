@@ -1,12 +1,13 @@
 {
-  "name": "mern-mongodb-login--reg",
+  "name": "4bt",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "node server.js"
+    "test": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +20,8 @@
     "mongoose": "^5.8.0",
     "nodemon": "^2.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": "13.3.0"
+  }
 }

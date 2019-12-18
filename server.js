@@ -15,10 +15,12 @@ app.use(
 
 const mongoURI = 'mongodb://localhost:27017/mernloginreg'
 
-mongoose
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/4bt");
+
+/*mongoose
   .connect(mongoURI, { useNewUrlParser: true })
   .then(() => console.log("MongoDB connected!"))
-  .catch(err => console.log(err))
+  .catch(err => console.log(err)) */
 
 let Users = require('./routes/Users')
 
