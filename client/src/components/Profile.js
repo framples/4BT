@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
-import "./profile.css"; 
+import "./profile.css";
 
 class Profile extends Component {
     constructor() {
@@ -9,8 +9,9 @@ class Profile extends Component {
             first_name: '',
             last_name: '',
             email: '',
+            review: '',
             errors: {}
-            
+
         }
     }
 
@@ -21,6 +22,7 @@ class Profile extends Component {
             first_name: decoded.first_name,
             last_name: decoded.last_name,
             email: decoded.email,
+            review: decoded.review,
         })
     }
 
@@ -44,6 +46,12 @@ class Profile extends Component {
                             <tr>
                                 <td>Email</td>
                                 <td>{this.state.email}</td>
+                            </tr>
+                            <tr>
+                                <td for="exampleFormControlTextarea1">Date Review:</td>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <td>{this.state.review}</td>
+                                <button type="button" class="btn btnSubmit btn-success">Submit</button>
                             </tr>
                         </tbody>
                     </table>
