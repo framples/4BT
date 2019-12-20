@@ -47,11 +47,11 @@ class Profile extends Component {
                                 <td class="data">Email</td>
                                 <td class="data2">{this.state.email}</td>
                             </tr>
-                            <tr>
+                            <tr class="data2">
                                 <td for="exampleFormControlTextarea1">Date Review:</td>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 <td>{this.state.review}</td>
-                                <button type="button" class="btn btnSubmit btn-success">Submit</button>
+                                <button id="button" type="button" class="btn btnSubmit btn-success">Submit</button>
                             </tr>
                         </tbody>
                     </table>

@@ -35,9 +35,20 @@ code {
 .data {
   color: white;
   font-size: 15px;
+  width: 30px;
+  padding-right: 0
 }
 
 .data2 {
   color: white;
   font-size: 20px;
+  margin-right: -500;
+  width: 30px;
 }
+
+#button {
+  background-color: darkblue;
+
+}
+
+
