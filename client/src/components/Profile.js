@@ -28,7 +28,6 @@ class Profile extends Component {
         e.preventDefault()
 
         const review = {
-            first_name: this.state.first_name,
             date_name: this.state.date_name,
             platform: this.state.platform,
             one_word: this.state.one_word,
@@ -38,7 +37,7 @@ class Profile extends Component {
         getReview(review)
             .then(res => {
                 if (res) {
-                    this.props.history.push('/reviewbox')
+                    this.props.history.push('/review')
                 }
             })
             .catch(err => {
@@ -56,8 +55,12 @@ class Profile extends Component {
 
     render() {
         return (
-
                 <div className="container">
+                    <div id="profile" className="jumbron mt-5">
+                        <div className="col-sm-8 mx-auto">
+                            <h1 id="profile-text" className="text-center">Thanks for signing in, {this.state.first_name}!</h1>
+                        </div>
+                    </div>
                     <div className="row1 magictime spaceInLeft">
                         <div className="col-md-6 mt-5 mx-auto">
                             <form noValidate onSubmit={this.onSubmit}>

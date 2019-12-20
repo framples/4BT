@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
 import "./Review.css";
 
+
 class Reviewbox extends Component {
     constructor() {
         super()
@@ -36,7 +37,7 @@ class Reviewbox extends Component {
                     </div>
                     <div class = "card-body">
                         <h5 class = "card-title">Date:{this.state.date_name}</h5>
-                        <p class = "card-text">Review from {this.state.first_name}</p>
+                        <p class = "card-text">Review from: {this.state.first_name}</p>
                         <p class = "card-text">Met on: {this.state.platform}</p>
                         <p class = "card-text">If you had only one word to describe them: {this.state.one_word}</p>
                         <p class = "card-text">Review: {this.state.review}</p>

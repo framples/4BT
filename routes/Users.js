@@ -4,6 +4,7 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
+const Review = require("../models/Review")
 const User = require("../models/User")
 users.use(cors())
 
@@ -72,7 +73,7 @@ users.post('/login', (req, res) => {
         })
 });
 
-users.get('/profile', (req, res) => {
+/*users.get('/profile', (req, res) => {
     let decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
     User.findOne({
@@ -88,6 +89,12 @@ users.get('/profile', (req, res) => {
         .catch(err => {
             res.send('error: ' + err)
         })
+})*/
+
+users.get('/review', (req, res) => {
+    Review.findAll({
+        
+    })
 })
 
 

@@ -46,7 +46,7 @@ export const login = user => {
 
 export const getReview = review => {
   return axios
-  .post ('users/profile', {
+  .post ('/review', {
     date_name: review.date_name,
     platform: review.platform,
     one_word: review.one_word,
