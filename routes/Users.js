@@ -93,6 +93,10 @@ users.post('/login', (req, res) => {
 
 users.get('/review', (req, res) => {
     Review.findAll({
+        date: req.body.date_name,
+        platform: req.body.platform,
+        one_word: req.body.one_word,
+        review: req.body.review
         
     })
 })
