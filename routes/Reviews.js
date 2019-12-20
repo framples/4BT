@@ -13,11 +13,20 @@ reviews.post('/profile', (req, res) => {
     const today = new Date()
     const userData = {
         first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: req.body.password,
+       date_name: req.body.date_name,
+        platform: req.body.platform,
+        one_word: req.body.one_word,
+        review: req.body.review,
         created: today
     }
+
+    Review.create(userData)
+    .then(review => {
+        res.json({ status: review.date_name + 'this is a test'})
+    })
+    .catcher(err => {
+        res.send('error' + err)
+    })
 })
 
 reviews.get('/reviews', (req, res) => {
