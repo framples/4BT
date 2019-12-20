@@ -29,29 +29,29 @@ class Profile extends Component {
     render() {
         return (
             <div className="container">
-                <div className="jumbotron mt-5">
+                <div id="profile" className="jumbotron mt-5">
                     <div className="col-sm-8 mx-auto">
-                        <h1 className="text-center">PROFILE</h1>
+                        <h1 id="profile-text" className="text-center">PROFILE</h1>
                     </div>
                     <table className="table col-md-6 mx-auto">
                         <tbody>
                             <tr>
-                                <td>First Name</td>
-                                <td>{this.state.first_name}</td>
+                                <td class="data">First Name</td>
+                                <td class="data2">{this.state.first_name}</td>
                             </tr>
                             <tr>
-                                <td>Last Name</td>
-                                <td>{this.state.last_name}</td>
+                                <td class="data">Last Name</td>
+                                <td class="data2">{this.state.last_name}</td>
                             </tr>
                             <tr>
-                                <td>Email</td>
-                                <td>{this.state.email}</td>
+                                <td class="data">Email</td>
+                                <td class="data2">{this.state.email}</td>
                             </tr>
-                            <tr>
+                            <tr class="data2">
                                 <td for="exampleFormControlTextarea1">Date Review:</td>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 <td>{this.state.review}</td>
-                                <button type="button" class="btn btnSubmit btn-success">Submit</button>
+                                <button id="button" type="button" class="btn btnSubmit btn-success">Submit</button>
                             </tr>
                         </tbody>
                     </table>
