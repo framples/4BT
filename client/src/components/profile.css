@@ -12,3 +12,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#profile  {
+  background-color: teal;
+  padding: 90px;
+  margin: 30px;
+  border-radius: 10%;
+  width: 600px;
+  margin-left: 250px;
+}
+
+#profile-text {
+  padding: 0px;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 35px;
+
+}
+
+.data {
+  color: white;
+  font-size: 15px;
+  width: 30px;
+  padding-right: 0
+}
+
+.data2 {
+  color: white;
+  font-size: 20px;
+  margin-right: -500;
+  width: 30px;
+}
+
+#button {
+  background-color: darkblue;
+
+}
+
+
