@@ -30,7 +30,7 @@ export const login = user => {
     })
 }
 
-export const getProfile = user => {
+/*export const getProfile = user => {
   return axios
     .get('users/profile', {
       // headers: { Authorization: ` ${this.getToken()}` }
@@ -42,4 +42,20 @@ export const getProfile = user => {
     .catch(err => {
       console.log(err)
     })
+}*/
+
+export const getReview = review => {
+  return axios
+  .post ('users/profile', {
+    date_name: review.date_name,
+    platform: review.platform,
+    one_word: review.one_word,
+    review: review.review,
+  })
+  .then(res => {
+    console.log('Review added.')
+  })
 }
+
+
+
