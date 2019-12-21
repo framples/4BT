@@ -30,6 +30,25 @@ export const login = user => {
     })
 }
 
+
+export const getReview = review => {
+  return axios
+    .post('users/profile', {
+      date_name: review.date_name,
+      platform: review.platform,
+      one_word: review.one_word,
+      review: review.review
+    })
+    .then(res => {
+      console.log("Hmm?", res);
+     // localStorage.setItem('usertoken', res.data)
+     // return res.data
+    })
+    .catch(err => {
+      console.log("AAA!", err)
+    })
+}
+
 /*export const getProfile = user => {
   return axios
     .get('users/profile', {
@@ -44,9 +63,9 @@ export const login = user => {
     })
 }*/
 
-export const getReview = review => {
+/*export const getReview = review => {
   return axios
-  .post ('/review', {
+  .post ('reviews/review', {
     date_name: review.date_name,
     platform: review.platform,
     one_word: review.one_word,
@@ -55,7 +74,8 @@ export const getReview = review => {
   .then(res => {
     console.log('Review added.')
   })
-}
+} 
+*/
 
 
 

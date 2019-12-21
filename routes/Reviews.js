@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const reviews = express.Router()
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
@@ -39,4 +39,5 @@ reviews.get('/reviews', (req, res) => {
 })
 
 
-module.exports = reviews
+module.exports = reviews 
+*/
