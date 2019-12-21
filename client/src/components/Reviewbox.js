@@ -40,7 +40,7 @@ class Reviewbox extends Component {
                         <p className = "card-text">Review from: {this.state.first_name}</p>
                         <p className = "card-text">Met on: {this.state.platform}</p>
                         <p className = "card-text">If you had only one word to describe them: {this.state.one_word}</p>
-                        <p classNAme = "card-text">Review: {this.state.review}</p>
+                        <p className = "card-text">Review: {this.state.review}</p>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,74 @@ const User = require("../models/User")
 users.use(cors())
 
 process.env.SECRET_KEY = 'secret'
+/////////////////////////////////////////////////////////////
+/*
+users.post('/profile', (req, res) => {
+    const today = new Date()
+    const reviewData = {
+        date_name: req.body.date_name,
+        first_name: req.body.first_name,
+        platform: req.body.platform,
+        one_word: req.body.one_word,
+        review: req.body.review,
+        created: today
+    }
+    Review.create(reviewData)
+        .then(review => {
+            res.json({ status: "reviewed"})
+        })
+        .catch(err => {
+            res.send('error: ' + err)
+        })
+}) 
 
+
+
+*/
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+users.post('/profile', (req, res) => {
+    const today = new Date()
+    const userData = {
+        date_name: req.body.date_name,
+        platform: req.body.platform,
+        review: req.body.review,
+        one_word: req.body.one_word,
+        created: today
+    }
+
+    User.findOne({
+        email: req.body.email
+    })
+        .then(user => {
+            if (!user) {
+                bcrypt.hash(req.body.password, 10, (err, hash) => {
+                    userData.password = hash
+                    User.create(userData)
+                        .then(user => {
+                            res.json({ status: user.email + ' registered!' })
+                        })
+                        .catch(err => {
+                            res.send('error: ' + err)
+                        })
+                })
+            } else {
+                res.json({ error: 'User already exists' })
+            }
+        })
+        .catch(err => {
+            res.send('error: ' + err)
+        })
+})
+///////////////////////////////////////////////////
 users.post('/register', (req, res) => {
     const today = new Date()
     const userData = {
@@ -73,6 +140,7 @@ users.post('/login', (req, res) => {
         })
 });
 
+
 /*users.get('/profile', (req, res) => {
     let decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
@@ -93,6 +161,10 @@ users.post('/login', (req, res) => {
 
 users.get('/review', (req, res) => {
     Review.findAll({
+        date: req.body.date_name,
+        platform: req.body.platform,
+        one_word: req.body.one_word,
+        review: req.body.review
         
     })
 })
